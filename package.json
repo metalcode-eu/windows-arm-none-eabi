@@ -1,0 +1,66 @@
+{
+  "name": "windows-arm-none-eabi",
+  "displayName": "windows-arm-none-eabi",
+  "description": "GNU Arm embedded toolchain for Windows",
+  "icon": "images/gcc-windows-128x128.png",
+  "version": "0.1.2",
+  "preview": true,
+  "publisher": "metalcode-eu",
+  "engines": {
+    "vscode": "^1.24.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "GNU Arm embedded toolchain configuration",
+      "properties": {
+        "arm-none-eabi.bin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/bin",
+          "description": "The path to the GNU toolchain."
+        },
+        "arm-none-eabi.include": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/arm-none-eabi/include",
+          "description": "The path to the header files."
+        },
+        "arm-none-eabi.lib": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/arm-none-eabi/lib",
+          "description": "The path to the library files."
+        },
+				"arm-none-eabi.libgcc": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/lib/gcc/arm-none-eabi/7.3.1",
+					"description": "The path to the libgcc files."
+				}
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metalcode-eu/windows-arm-none-eabi.git"
+  },
+  "license": "GPL-3.0",
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.6"
+  }
+}

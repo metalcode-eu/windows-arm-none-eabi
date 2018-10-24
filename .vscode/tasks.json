@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build firmware",
+      "type": "shell",
+      "command": "make test",
+      "options": {
+        "env": {
+          "INCLUDE": "${config:arm-none-eabi.include}",
+          "LIB": "${config:arm-none-eabi.lib}",
+          "LIBGCC": "${config:arm-none-eabi.libgcc}",
+        }
+      },
+      "osx": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin}:${env:PATH}",
+          }
+        },
+      },
+      "linux": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin}:${env:PATH}",
+          }
+        },
+      },
+      "windows": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin};${env:PATH}",
+          }
+        },
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
