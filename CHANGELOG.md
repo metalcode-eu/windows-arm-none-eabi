@@ -1,3 +1,7 @@
+### Version 0.1.6
+Version 8-2018-q4-major for Windows  
+Released: December 20, 2018
+
 ### Version 0.1.2
 Fixed typo in path to repository causing a wrong link in the marketplace.
 

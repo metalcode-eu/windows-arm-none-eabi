@@ -107,6 +107,14 @@ description of the <code>Type.fields</code> method for a description of the
 <p>An instance of <code>Type</code> has the following attributes:
 </p>
 <dl>
+<dt><a name="index-Type_002ealignof"></a>Variable: <strong>Type.alignof</strong></dt>
+<dd><p>The alignment of this type, in bytes.  Type alignment comes from the
+debugging information; if it was not specified, then <small>GDB</small> will
+use the relevant ABI to try to determine the alignment.  In some
+cases, even this is not possible, and zero will be returned.
+</p></dd></dl>
+
+<dl>
 <dt><a name="index-Type_002ecode"></a>Variable: <strong>Type.code</strong></dt>
 <dd><p>The type code for this type.  The type code will be one of the
 <code>TYPE_CODE_</code> constants defined below.

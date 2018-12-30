@@ -123,12 +123,22 @@ message as its value and the Python call stack backtrace at the Python
 statement closest to where the <small>GDB</small> error occured as the
 traceback.
 </p>
+
+<p>When implementing <small>GDB</small> commands in Python via
+<code>gdb.Command</code>, or functions via <code>gdb.Function</code>, it is useful
+to be able to throw an exception that doesn&rsquo;t cause a traceback to be
+printed.  For example, the user may have invoked the command
+incorrectly.  <small>GDB</small> provides a special exception class that can
+be used for this purpose.
+</p>
+<dl compact="compact">
+<dt><code>gdb.GdbError</code>
 <a name="index-gdb_002eGdbError"></a>
-<p>When implementing <small>GDB</small> commands in Python via <code>gdb.Command</code>,
-it is useful to be able to throw an exception that doesn&rsquo;t cause a
-traceback to be printed.  For example, the user may have invoked the
-command incorrectly.  Use the <code>gdb.GdbError</code> exception
-to handle this case.  Example:
+</dt>
+<dd><p>When thrown from a command or function, this exception will cause the
+command or function to fail, but the Python stack will not be
+displayed.  <small>GDB</small> does not throw this exception itself, but
+rather recognizes it when thrown from user Python code.  Example:
 </p>
 <div class="smallexample">
 <pre class="smallexample">(gdb) python
@@ -146,6 +156,8 @@ to handle this case.  Example:
 (gdb) hello-world 42
 hello-world takes no arguments
 </pre></div>
+</dd>
+</dl>
 
 <hr>
 <div class="header">

@@ -107,6 +107,12 @@ See <a href="Machine-Dependencies.html#Machine-Dependencies">Machine Dependencie
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Data.html#Data">Data</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.data <var>subsection</var></code>
 </td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Dc.html#Dc">Dc</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.dc[<var>size</var>] <var>expressions</var></code>
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Dcb.html#Dcb">Dcb</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.dcb[<var>size</var>] <var>number</var> [,<var>fill</var>]</code>
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Ds.html#Ds">Ds</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.ds[<var>size</var>] <var>number</var> [,<var>fill</var>]</code>
+</td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Def.html#Def">Def</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.def <var>name</var></code>
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Desc.html#Desc">Desc</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.desc <var>symbol</var>, <var>abs-expression</var></code>
@@ -212,6 +218,8 @@ See <a href="Machine-Dependencies.html#Machine-Dependencies">Machine Dependencie
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Nolist.html#Nolist">Nolist</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.nolist</code>
 </td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Nops.html#Nops">Nops</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.nops <var>size</var>[, <var>control</var>]</code>
+</td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Octa.html#Octa">Octa</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.octa <var>bignums</var></code>
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Offset.html#Offset">Offset</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.offset <var>loc</var></code>
@@ -258,12 +266,12 @@ See <a href="Machine-Dependencies.html#Machine-Dependencies">Machine Dependencie
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Size.html#Size">Size</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.size [<var>name</var> , <var>expression</var>]</code>
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Skip.html#Skip">Skip</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.skip <var>size</var> , <var>fill</var></code>
+<tr><td align="left" valign="top">&bull; <a href="Skip.html#Skip">Skip</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.skip <var>size</var> [,<var>fill</var>]</code>
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 </pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Sleb128.html#Sleb128">Sleb128</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.sleb128 <var>expressions</var></code>
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Space.html#Space">Space</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.space <var>size</var> , <var>fill</var></code>
+<tr><td align="left" valign="top">&bull; <a href="Space.html#Space">Space</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.space <var>size</var> [,<var>fill</var>]</code>
 </td></tr>
 <tr><td align="left" valign="top">&bull; <a href="Stab.html#Stab">Stab</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top"><code>.stabd, .stabn, .stabs</code>
 </td></tr>

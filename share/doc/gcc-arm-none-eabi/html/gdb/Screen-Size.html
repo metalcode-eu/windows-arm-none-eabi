@@ -78,11 +78,13 @@ Next: <a href="Numbers.html#Numbers" accesskey="n" rel="next">Numbers</a>, Previ
 <p>Certain commands to <small>GDB</small> may produce large amounts of
 information output to the screen.  To help you read all of it,
 <small>GDB</small> pauses and asks you for input at the end of each page of
-output.  Type <tt class="key">RET</tt> when you want to continue the output, or <kbd>q</kbd>
-to discard the remaining output.  Also, the screen width setting
-determines when to wrap lines of output.  Depending on what is being
-printed, <small>GDB</small> tries to break the line at a readable place,
-rather than simply letting it overflow onto the following line.
+output.  Type <tt class="key">RET</tt> when you want to see one more page of output,
+<kbd>q</kbd> to discard the remaining output, or <kbd>c</kbd> to continue
+without paging for the rest of the current command.  Also, the screen
+width setting determines when to wrap lines of output.  Depending on
+what is being printed, <small>GDB</small> tries to break the line at a
+readable place, rather than simply letting it overflow onto the
+following line.
 </p>
 <p>Normally <small>GDB</small> knows the size of the screen from the terminal
 driver software.  For example, on Unix <small>GDB</small> uses the termcap data base

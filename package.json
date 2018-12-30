@@ -3,7 +3,7 @@
   "displayName": "windows-arm-none-eabi",
   "description": "GNU Arm embedded toolchain for Windows",
   "icon": "images/gcc-windows-128x128.png",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "preview": true,
   "publisher": "metalcode-eu",
   "engines": {
@@ -22,7 +22,7 @@
             "string",
             "null"
           ],
-          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/bin",
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.6/bin",
           "description": "The path to the GNU toolchain."
         },
         "arm-none-eabi.include": {
@@ -30,7 +30,7 @@
             "string",
             "null"
           ],
-          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/arm-none-eabi/include",
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.6/arm-none-eabi/include",
           "description": "The path to the header files."
         },
         "arm-none-eabi.lib": {
@@ -38,7 +38,7 @@
             "string",
             "null"
           ],
-          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/arm-none-eabi/lib",
+          "default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.6/arm-none-eabi/lib",
           "description": "The path to the library files."
         },
 				"arm-none-eabi.libgcc": {
@@ -46,7 +46,7 @@
 						"string",
 						"null"
 					],
-					"default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.2/lib/gcc/arm-none-eabi/7.3.1",
+					"default": "${env:USERPROFILE}/.vscode/extensions/metalcode-eu.windows-arm-none-eabi-0.1.6/lib/gcc/arm-none-eabi/8.2.1",
 					"description": "The path to the libgcc files."
 				}
       }
@@ -61,6 +61,6 @@
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
-    "vscode": "^1.1.6"
+    "vscode": "^1.1.26"
   }
 }

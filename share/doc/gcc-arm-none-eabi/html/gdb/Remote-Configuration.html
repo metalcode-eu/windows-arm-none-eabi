@@ -176,16 +176,25 @@ responses.
 <a name="set-remote-hardware_002dwatchpoint_002dlimit"></a><a name="set-remote-hardware_002dbreakpoint_002dlimit"></a></dd>
 <dt><code>set remote hardware-watchpoint-limit <var>limit</var></code></dt>
 <dt><code>set remote hardware-breakpoint-limit <var>limit</var></code></dt>
-<dd><p>Restrict <small>GDB</small> to using <var>limit</var> remote hardware breakpoint or
-watchpoints.  A limit of -1, the default, is treated as unlimited.
+<dd><p>Restrict <small>GDB</small> to using <var>limit</var> remote hardware watchpoints
+or breakpoints.  The <var>limit</var> can be set to 0 to disable hardware
+watchpoints or breakpoints, and <code>unlimited</code> for unlimited
+watchpoints or breakpoints.
+</p>
+</dd>
+<dt><code>show remote hardware-watchpoint-limit</code></dt>
+<dt><code>show remote hardware-breakpoint-limit</code></dt>
+<dd><p>Show the current limit for the number of hardware watchpoints or
+breakpoints that <small>GDB</small> can use.
 </p>
 <a name="index-limit-hardware-watchpoints-length"></a>
 <a name="index-remote-target_002c-limit-watchpoints-length"></a>
 <a name="set-remote-hardware_002dwatchpoint_002dlength_002dlimit"></a></dd>
 <dt><code>set remote hardware-watchpoint-length-limit <var>limit</var></code></dt>
-<dd><p>Restrict <small>GDB</small> to using <var>limit</var> bytes for the maximum length of
-a remote hardware watchpoint.  A limit of -1, the default, is treated
-as unlimited.
+<dd><p>Restrict <small>GDB</small> to using <var>limit</var> bytes for the maximum
+length of a remote hardware watchpoint.  A <var>limit</var> of 0 disables
+hardware watchpoints and <code>unlimited</code> allows watchpoints of any
+length.
 </p>
 </dd>
 <dt><code>show remote hardware-watchpoint-length-limit</code></dt>
